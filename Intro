@@ -1,8 +1,24 @@
 // All functions are methods --- which include properties [ex. button color] and events [ acting on object changes]. 
 
 
-// C# supports static typing
+// C# supports static typing.
 
 
 // C# does not eliminate pointers, but makes them unnessary for most programming tasks.
+
+
+// C# 5.0 interoperates with Windows Runtime (WinRT).
+// WinRT = A execution interface and runtime environment for accessing libraries in a OOP fashion.
+
+
+
+/* LINQ = Language Integrated Query 
+
+LINQ enables queries to be written directly within a C# program and checked statically for correctness, 
+and query both local collections (such as lists or XML documents) or remote data sources (such as a database).  */
+
+
+// DOM = Document Object Models 
+
+
 
