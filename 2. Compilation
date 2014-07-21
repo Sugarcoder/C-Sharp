@@ -1,0 +1,12 @@
+// 'Types' are organized into namespaces
+
+// Windows application has a 'Main' method, and is an .exe file.
+
+// A library is a .dll and is equivalent to a .exe without an entry point.
+
+
+/* You can use Visual Studio (IDE) to compile, 
+or call 'csc' in the command line to compile it manually. 
+
+To compile manually, save a file (ex. Love.cs), 
+and then type csc Love.cs in the command line.  */
