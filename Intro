@@ -1,0 +1,8 @@
+// All functions are methods --- which include properties [ex. button color] and events [ acting on object changes]. 
+
+
+// C# supports static typing
+
+
+// C# does not eliminate pointers, but makes them unnessary for most programming tasks.
+
