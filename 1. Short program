@@ -1,0 +1,34 @@
+using System;
+
+class Test
+{
+  static void Main()    
+   {
+     int x = 12 * 30;
+     Console.WriteLine (x);
+   } 
+}
+
+
+
+// Writing higher-level functions that call upon lower-level functions simplifies a program.
+
+
+using System;
+
+class Test
+{ 
+  static void Main()      // Main parantheses is empty because there ar eno parameters
+  {
+    Console.WriteLine(FeetToInches (30));    // 360    - 'FeetToInches' is a method, 30 is an argument (passed to FeetToInches)
+    Console.WriteLine (FeetToInches (100));  // 1200
+  }
+  
+  
+  static int FeetToInches (Int feet)
+  {
+    int inches = feet * 12; 
+    return inches;
+  }
+
+}
