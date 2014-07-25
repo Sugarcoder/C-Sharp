@@ -1,0 +1,14 @@
+/* Conversions can be implicit or explicit. 
+
+Implicit conversions = Happen automatically
+Explicit conversions = Requires a 'Cast'. 
+
+Example for implicit (converting 'int' to 'long'),
+Example for explicit cast (converting 'int' to 'short') */
+
+
+int x = 12345;       // int is a 32-bit integer
+long y = x;          // Implicit converstion to 64-bit
+short z = (short)x;  // Explicit conversion to 16-bit integer
+
+
