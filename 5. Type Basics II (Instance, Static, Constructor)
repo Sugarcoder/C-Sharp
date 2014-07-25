@@ -1,0 +1,80 @@
+// Data is created by instantiating a type. 
+
+// Example of a Instance (UnitConverter): 
+
+UnitConverter feetToInchesConverter = new UnitConverter (12);
+
+
+// The object's 'constructor' is called to perform initialization.
+
+
+/*  Constructor = defined like a method, 
+except that the method name and return type are reduced 
+to the name of the enclosing type.  */
+
+
+// Example: 
+
+public class UnitConverter 
+{
+  public UnitConverter (int unitRatio) {ratio = unitRatio};
+}
+
+
+
+
+// Instance members = Data and function members that operate on the instance of the type.
+
+// Example: UnitConverter, ToString
+
+
+/* Data and function members that don't operate on the instance of the type
+needs to be marked 'static'. */
+
+// Examples of 'static methods: Test.Main, Console.WriteLine
+
+// Instance vs. Static member example:
+
+
+public class Panda
+{
+  public string Name;     // Instance field
+  public static int Population;   // Static field
+  
+  public Panda (string n)      // Constructor
+  {
+    Name = n;    // Assign the Instance field
+	Population = Population + 1;   // Increment the static Population field
+  }
+}
+
+
+
+
+/* The following code creates two instances of 'Panda', 
+and then prints the total population. */
+
+
+using System;
+
+class Test
+{
+	static void Main()
+	{
+		Panda p1 = new Panda ("Pandee");
+		Panda p2 = new Panda ("Pandah");
+		
+		Console.WriteLine (p1.Name);      // Pandee
+		Console.WriteLine (p2.Name);      // Pandah
+		
+		Console.WriteLine (Panda.Population);   // 2
+	}
+}
+
+
+
+/* 'Public' keyword exposes members to other classes.
+If the 'Name' field in Panda was not public, 
+the 'Test' class could not access it. */
+
+
