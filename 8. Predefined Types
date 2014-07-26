@@ -1,0 +1,22 @@
+/* PREDEFINED TYPES
+
+Value types: 
+
+Numeric
+- Signed integer (sbyte, short, int, long)
+- Unsigned integer (byte, ushort, uint, ulong)
+- Real number (float, double, decimal)
+
+Logical - bool
+Character - char
+
+
+Reference types:
+
+String - string
+Object - object  */
+
+// These two statements are the same: 
+
+int i = 5; 
+System.Int32 i = 5;
