@@ -1,0 +1,56 @@
+// Numeric Suffixes (Examples):
+
+float f = 1.0F;
+double d = 1D;    // Adding 'D' is optional
+decimal d = 1.0M; 
+uint uint i = 1U;
+long i = 1L; 
+ulong i = 1UL;
+
+
+// A float can be implicitly converted to a double. 
+
+// All integral types may be implicitly converted to all floating-point types. 
+
+int i = 1;
+float f = i; 
+
+// The reverse conversion must be explicit:
+
+int 12 = (int)f;
+
+
+
+// Increment and Decrement Operators (add or subtracts 1): ++, --
+
+
+
+/* 'Checked' = Tells the runtime to generate an OverFlowException 
+rather than overflow silently when an integral expression or statement 
+exceeds the arithmetic limits of that type.  */
+
+// Examples on how to use 'check': 
+
+
+int a = 1000;
+int b = 1000; 
+
+int c = checked (a * b);    // Checks just the expression
+
+
+// OR 
+
+
+checked
+{
+	...
+	c = a * b; 
+	...
+}
+
+
+// To disable overflow, type 'unchecked'.
+
+int x = int.MaxValue;
+int y = unchecked (x + 1);
+unchecked { int z = x + 1; }
