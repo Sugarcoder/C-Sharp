@@ -54,3 +54,16 @@ checked
 int x = int.MaxValue;
 int y = unchecked (x + 1);
 unchecked { int z = x + 1; }
+
+
+
+
+
+/* Bitwise Operators: 
+
+~ = Complement
+& = And
+| = Or
+^ = Exclusive Or
+<< = Shift Left
+>> = Shift Right
