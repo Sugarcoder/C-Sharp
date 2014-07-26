@@ -1,0 +1,70 @@
+// VALUE TYPES = comprise most built-in types (int, char, bool, struct, enum)
+
+// Example: 
+
+public struct Point { public int x, y;}      // Point is a 'struct'
+
+static void Main()
+{
+	Point p1 = new Point();
+	p1.x = 7;
+	
+	Point p2 = p1;     // Assignment causes copy
+	
+	Console.WriteLine (p1.x);   // 7
+	Console.WriteLine (p2.x);   // 7
+	
+	
+	p1.x = 9;    // Changes p1.x
+	
+	Console.WriteLine (p1.x);   // 9
+	Console.WriteLine (p2.x);   // 7
+}
+
+
+
+
+// REFERENCE TYPES = comprise all class, array, delegate and interface (string)
+
+// Reference types have 2 parts: an object and the reference to the object.
+
+
+// Example: 
+
+public class Point {public int = x, y;}    // Point is a 'class' instead, so p1 affects p2.
+
+static void Main()
+{
+	Point p1 = new Point();    
+	p1.x = 7;
+	
+	Point p2 = p1;     // Copies p1 reference
+	
+	Console.WriteLine (p1.x);    // 7
+	Console.WriteLine (p2.x);    // 7
+	
+	p1.x = 9;   // Changes p1.x
+	
+	Console.WriteLine (p1.x);   // 9
+	Console.WriteLine (p2.x);   // 9
+}
+
+	
+
+// NULL = The reference points have no objects
+
+// Example: 
+
+class Point {...}
+
+Point p = null; 
+Console.WriteLine (p == null);   // True
+
+
+// A Value type cannot have a null value. 
+// Example (this will compile an error): 
+
+struct Point {...}
+
+Point p = null; 
+int x = null; 
