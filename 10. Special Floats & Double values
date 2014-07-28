@@ -31,3 +31,19 @@ Console.WriteLine (double.IsNaN (0.0 / 0.0));    // True
 // Two NaN values are equal, when using 'object.Equals'.
 
 Console.WriteLine (object.Equals (0.0 / 0.0, double.NaN));     // True
+
+
+
+
+
+// float tenth = float.0.1f;    Not quite 0.1
+
+// float one = 1f;
+
+// Console.WriteLine (one - tenth * 0.1f);    // -1.490...
+
+
+
+
+
+
