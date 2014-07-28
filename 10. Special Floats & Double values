@@ -1,0 +1,33 @@
+The 'float' and 'double' classes have constants for NaN, MaxValue, MinValue, Epsilon. */
+
+// Example: 
+
+Constant.WriteLine (double.NegativeInfinity);   // -Infinity
+
+
+
+
+// Dividing a non-zero number by a zero results in an infiniate value. 
+
+Console.Writeline (-1.0 / 0.0);    // Infinity 
+
+
+
+
+// When using ==, NaN value is never equal to another value.
+
+Console.WriteLine (0.0 / 0.0 == double.NaN);   // False
+
+
+
+
+// To test whether a value is NaN, use the float.IsNan or double.IsNan.
+
+Console.WriteLine (double.IsNaN (0.0 / 0.0));    // True
+
+
+
+
+// Two NaN values are equal, when using 'object.Equals'.
+
+Console.WriteLine (object.Equals (0.0 / 0.0, double.NaN));     // True
