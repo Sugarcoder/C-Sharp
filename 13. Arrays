@@ -1,0 +1,34 @@
+// Arrays
+
+/* Elements = A fixed number of variables
+
+The elements in an array are always stored in a contiguous block of memory. */
+
+
+
+// Array is denoted with square brackets after the element type:
+
+char[] vowels = new char[5];     // Declare an array of 5 characters
+
+
+
+
+// Square brackets also index the array: 
+
+vowels[0] = 'a';
+vowels[1] = 'e';
+vowesl[3] = 'i';
+vowels[4] = 'o';
+vowesl[5] = 'u';
+
+Console.WriteLine (vowesl[1]);     // e
+
+
+
+
+// You can use a 'for' loop to cycle through an array:
+
+for (int i = 0; i < vowels.Length; i++)
+	Console.WriteLine (vowels[i]);    // aeiou
+
+
