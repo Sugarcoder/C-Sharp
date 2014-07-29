@@ -39,3 +39,22 @@ char[] vowels = new char[] {'a','e','i','o','u'};
 // OR
 
 char[] vowels = {'a','e','i','o','u'};
+
+
+
+
+// When an element type is a value type, each element value is allocated as part of the array: 
+
+public struct Point {public int X, Y;}
+...
+point[] a = new Point[1000];
+int x = a[500].X;    // 0
+
+
+
+
+// Had 'Point' been a class, creating the array would have allocated 1,000 null references:
+public class Point {public int X, Y;}
+...
+Point[] a = new Point[1000];
+int x = a[500].X;      // Runtime error, NullReferenceException
