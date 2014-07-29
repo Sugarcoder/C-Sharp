@@ -32,7 +32,6 @@ for (int i = 0; i < vowels.Length; i++)
 
 
 
-
 // Array initialization expression = Lets you declare and populate an array in a single step.
 
 char[] vowels = new char[] {'a','e','i','o','u'};
