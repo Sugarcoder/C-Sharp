@@ -1,0 +1,29 @@
+// Characters
+
+char c = 'A';    // Single character
+
+
+
+
+// Strings
+
+string a = "Ice Cream";
+string b = "Hot Food";
+Console.WriteLine (a == b);   // False
+
+
+
+
+// 'string' does not support <,> operators for comparisons. Must use 'CompareTo' instead.
+
+
+
+
+// A Verbatim string literal = prefixed with @ and does not support escape sequences.
+
+
+
+
+// String Concatenation
+
+string s = "a" + "b";     // The '+' concatenates 2 strings
