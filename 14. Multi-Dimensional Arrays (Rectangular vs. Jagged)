@@ -1,0 +1,54 @@
+// Multi-dimensional Arrays
+
+// There are 2 varieties of multi-dimensional arrays: rectangular and jagged.
+
+
+
+/* Rectangular Arrays = Represent an n-dimensional block of memory. 
+They are declared by using commas to separate each dimension. */
+
+
+int[,] matrix = new int[3,3];
+
+// OR
+
+int[,] matrix = new int[,]
+{
+	{0,1,2}
+	{3,4,5}
+	{6,7,8}
+};
+
+
+
+/* Jagged Arrays = array of arrays
+They are declared using successive [] brackets to represent each dimension. */
+
+
+int[][] matrix = new int[3][];
+
+// OR
+
+int[][] matrix = new int[][]
+{
+	new int[] {0,1,2}
+	new int[] {3,4,5}
+	new int[] {6,7,8}
+};
+
+
+
+
+/* Each inner array is implicitly initialized to null rather than an empty array.
+
+Each inner array must be created manually:  */
+
+
+for (int i=0; i < matrix.Length; i++)
+{
+	matrix[i] = new int[3];       // Creates the inner array
+	for (int j=0; j < matrix[i].Length; j++)
+	matrix[i][j] = i * 3 + j;
+}
+
+
