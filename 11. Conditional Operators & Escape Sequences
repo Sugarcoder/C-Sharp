@@ -1,0 +1,24 @@
+// Conditional Operators (&&, ||)
+
+// Example: 
+
+static bool UseUmbrella (sunny || rainy)
+{
+	return !windy && (sunny || rainy);
+}
+
+
+
+// Excape Sequences
+
+char newLine = '\n';
+char backSlash = '\\';
+
+/* \o = Null
+\a = Alert
+\b = Backspace
+\f = Form feed
+\n = New Line
+\r = Carriage return
+\t = Horizontal tab
+\v = Vertical tab
