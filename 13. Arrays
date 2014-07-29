@@ -4,7 +4,7 @@ The elements in an array are always stored in a contiguous block of memory. */
 
 
 
-// Array is denoted with square brackets after the element type:
+// Array is denoted with [] brackets after the element type:
 
 char[] vowels = new char[5];     // Declare an array of 5 characters
 
@@ -15,9 +15,9 @@ char[] vowels = new char[5];     // Declare an array of 5 characters
 
 vowels[0] = 'a';
 vowels[1] = 'e';
-vowesl[3] = 'i';
+vowels[3] = 'i';
 vowels[4] = 'o';
-vowesl[5] = 'u';
+vowels[5] = 'u';
 
 Console.WriteLine (vowesl[1]);     // e
 
@@ -34,6 +34,7 @@ for (int i = 0; i < vowels.Length; i++)
 
 // Array initialization expression = Lets you declare and populate an array in a single step.
 
+
 char[] vowels = new char[] {'a','e','i','o','u'};
 
 // OR
@@ -45,6 +46,7 @@ char[] vowels = {'a','e','i','o','u'};
 
 // When an element type is a value type, each element value is allocated as part of the array: 
 
+
 public struct Point {public int X, Y;}
 ...
 point[] a = new Point[1000];
@@ -53,7 +55,9 @@ int x = a[500].X;    // 0
 
 
 
-// Had 'Point' been a class, creating the array would have allocated 1,000 null references:
+// If 'Point' was a class, creating the array would have allocated 1,000 null references:
+
+
 public class Point {public int X, Y;}
 ...
 Point[] a = new Point[1000];
