@@ -62,3 +62,20 @@ public class Point {public int X, Y;}
 ...
 Point[] a = new Point[1000];
 int x = a[500].X;      // Runtime error, NullReferenceException
+
+
+
+
+// To avoid the error above, we must instantiate 1,000 Points after instantiating the array:
+
+
+Point[] a = new Point[1,000];
+for (int i = 0; i < a.Length; i++)   // Iterate from 0 to 999
+	a[i] = new Point();              // Set array element i with new point
+	
+	
+
+// An array itself is always a reference type object.
+
+int[] a = null;    // This is legal
+
