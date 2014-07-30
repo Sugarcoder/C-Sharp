@@ -1,0 +1,2 @@
+/* A variable can be a local variable, parameter (value, ref, or out), 
+field (instance or static) or array element. */
