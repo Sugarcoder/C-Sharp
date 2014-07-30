@@ -1,0 +1,46 @@
+/* A method has a sequence of parameters. 
+
+Parameters define the set of arguments that must be 
+provided for that method. */
+
+
+/* Example:
+(method 'Foo' has a single parameter named 'p' of type int)  */
+
+
+static void Foo (int p)
+{
+	p = p + 1;                // Increment p by 1
+	Console.WriteLine(p);     // Write p to the screen
+}
+
+static void Main() { Foo (8); }
+
+
+
+/*  You can control how parameters are passed with the 'ref' and 'out' modifiers: 
+
+ref = Going in
+
+out = Going out  
+
+
+Arguments in C# are passed by value.
+A copy of the value is created when passed to the method:  */
+
+
+class Test
+{
+	static void Foo (int p)
+	{
+		p = p + 1;          
+		Console.WriteLine (p);    
+	}
+	
+	static void Main()
+	{
+		int x = 8;
+		Foo (x);                   // Make a copy of x
+		Console.WriteLine (x);     // x will still be 8
+	}
+}
