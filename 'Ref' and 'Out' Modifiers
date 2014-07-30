@@ -1,0 +1,64 @@
+// 'REF' MODIFIER
+
+// To pass by reference, C# provides the ref parameter modifier. 
+
+// Example (p and x refer to the same memory location):
+
+class Test
+{
+	static void (ref int p)
+	{
+		p = p + 1;
+		Console.WriteLine (p);    
+	}
+	
+	static void Main()
+	{
+		int x = 8; 
+		Foo (ref x);              // Ask 'Foo' to deal directly with x
+		Console.WriteLine (x);    // x is now 9
+	}
+}
+
+/* 'ref' is required for both writing and calling a method.
+
+The 'ref' modifier is essential in implementing a swap method. */
+
+
+
+
+// 'OUT' MODIFIER
+
+
+/* 'Out' is similar to 'ref', except:
+
+- Does not need to be assigned before going into the function
+
+- Must be assigned before it comes out of the function
+
+'Out' is most commonly used to get multiple return values back from a method. */
+
+
+// Example:
+
+class Test
+{
+	static void Split (string name, out string FirstNames, out string LastName)
+	{
+		int i = name.LastIndexOf (' ');
+		firstNames = name.Substring (0, i);
+		lastName = name.Substring (i + 1);
+	}
+	
+	static void Main()
+	{
+		string a, b;
+		Split ("Sailor Moon", out a, out b);
+		Console.WriteLine (a);
+		Console.WriteLine (b);
+	}
+}
+
+
+
+// 'Ref' and 'Out' are both passed by reference.
