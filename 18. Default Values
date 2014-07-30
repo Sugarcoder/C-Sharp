@@ -1,0 +1,9 @@
+/* Default Values:
+
+All reference types = null
+
+All numeric and enum types = 0
+
+char type = '\0'
+
+bool type = false   */
