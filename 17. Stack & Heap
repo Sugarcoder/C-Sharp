@@ -1,0 +1,33 @@
+// Stack
+
+// Stack = Block of memory for storing local varibales and parameters.
+
+// Example: 
+
+
+static int Factorial (int x)
+{
+	if (x == 0) return 1;
+	return x * Factorial (x-1);
+}
+
+
+/* This method is recursive (it calls itself). 
+Each time the method is entered, a new int is allocated on the stack.
+Each time the method exits, the int is deallocated. */
+
+
+
+
+// Heap
+
+// Heap = Block of memory in which objects reside (ex. reference-type instances).
+
+
+/* Whenever a new object is created, it is allocated on the Heap, and a reference to that object is returned.
+During a program's execution, the heap starts filling up as new objects are created.
+
+The runtime has a garbage collector that periodically deallocates objects from the heap,
+so your computer does not run out of memory. */
+
+
