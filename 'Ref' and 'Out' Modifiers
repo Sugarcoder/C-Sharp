@@ -1,5 +1,4 @@
-// 'Ref' and 'Out' are both passed by reference.
-
+// 'Ref' and 'Out' modifiers are both passed by reference.
 
 
 
