@@ -24,8 +24,6 @@ int[][] jaggedMatrix =
 
 // OR USE THE 'VAR' KEYWORD: 
 
-
-
 var i = 3;            // i is implicitly of type 'int'
 var s = "sausage";    // s is implicitly type 'string'
 
