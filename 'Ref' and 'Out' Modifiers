@@ -1,6 +1,10 @@
+// 'Ref' and 'Out' are both passed by reference.
+
+
+
+
 // 'REF' MODIFIER
 
-// To pass by reference, C# provides the ref parameter modifier. 
 
 // Example (p and x refer to the same memory location):
 
@@ -23,6 +27,7 @@ class Test
 /* 'ref' is required for both writing and calling a method.
 
 The 'ref' modifier is essential in implementing a swap method. */
+
 
 
 
@@ -61,4 +66,3 @@ class Test
 
 
 
-// 'Ref' and 'Out' are both passed by reference.
