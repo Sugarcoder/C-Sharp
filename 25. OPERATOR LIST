@@ -1,0 +1,105 @@
+/* OPERATOR LIST 
+[Operator, definition, example]
+
+
+PRIMARY 
+
+() = Function call:  x()
+
+[] = Array/index: a[x]
+
+++ = Post-increment: x++
+
+-- = Post-decrement: x--
+
+new = Create instance: new Foo()
+
+stackalloc = Unsafe stack allocation: stackal loc(10)
+
+typeof = Get type from identifier: typeof(int)
+
+checked = Integral overflow check on: checked(x)
+
+unchecked = Integral overflow check off: unchecked(x)
+
+default = Default value: default(char)
+
+await = Await: await myTask   
+
+
+
+UNARY
+
+sizeof = Get size of struct: sizeof(int)w
+
+++x = Pre-increment: ++x
+
+--x = Pre-decrement: --x
+
+() = Cast: (int)x
+
+*(unsafe) = Value at address: *x
+
+&(unsafe) = Address of value: &x
+
+
+
+SHIFT
+
+<< = Shift left: x << 1
+
+>> = Shift right: x >> 1
+
+
+
+RELATIONAL
+
+is = Type is or is subclass of: x is y
+
+as = Type conversion: x as y
+
+
+
+LOGICAL Xor - ^ = Exclusive Or: x ^ y
+
+
+
+Logical Or - | = Or: x | y
+
+
+Conditional And - &&: x && y
+
+
+Conditional Or - ||: x || y
+
+
+Null Coalescing - ??: x ?? y
+
+
+Conditional - ?:  : isTrue ? then ThisValue : elseThis Value
+
+
+
+ASSIGNMENT & LAMBDA
+
+Assign (=): x = y
+
+Multiply self by (*=): x *= 2
+
+Divide self by (/=): x /= 2
+
+Add to self (+=): x += 2
+
+Subtract to self (-=): x -= 2
+
+Shift self left by (<<=): x <<= 2
+
+Shift self right by (>>=): x >>= 2
+
+'And' self by (&=): x &= 2
+
+Exclusive-Or self by (^=): x ^= 2
+
+'Or' self by (|=): x |= 2
+
+Lambda (=>): x => x + 1    */
