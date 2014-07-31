@@ -4,7 +4,11 @@
 
 // Example: 
 
-void Foo (int x, int y) { Console.WriteLine (x + "," + y); }
+void Foo (int x, int y) 
+{ 
+	Console.WriteLine (x + "," + y); 
+}
+
 
 void Test()
 {
