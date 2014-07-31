@@ -1,0 +1,14 @@
+/* Expressions = Denotes a value 
+
+Some expressions are constants and variables.
+
+Expressions can be transformed and combined using operators. */
+
+// Example constant expression: 12
+
+
+
+
+// Operators = Takes one or more input operands to output a new expression. 
+
+// Example operator: *  (ex. 12 * 30)
