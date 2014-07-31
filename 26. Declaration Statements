@@ -1,0 +1,49 @@
+/* VARIABLE DECLARATION
+
+A declaration satement declares a new variable. */
+
+// Example: 
+
+string someWord = "rosebud";
+int someNumber = 10;
+bool rich = true, famous = false;
+
+
+// You can have multiple variables in a comma-separated list.
+
+
+
+/* CONSTANT DECLARATION 
+
+A Constant declaration is similar to a variable declaration, 
+except it can't be changed once declared. */
+
+// Example:
+
+const double c = 2.99789;
+c += 10;                     // Compile-time Error
+
+
+
+/* LOCAL VARIABLES
+
+The scope of a local variable (or local constant) extends throughout the current block.
+
+You cannot declare another local variable with the same name in the current block (or in any nested blocks). */
+
+// Example: 
+
+static void Main()
+{
+	int x;
+	{
+		int y;
+		int x;   // Error - x is already defined
+	}
+	
+	{
+		int y;    // OK - y is not in scope
+	}
+	
+	Console.Write (y);   // Error - y is out of scope
+}
