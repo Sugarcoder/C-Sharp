@@ -1,0 +1,19 @@
+// Named Arguments
+
+// Rather than identify an argument by position, you can identify an argument by name.
+
+// Example: 
+
+void Foo (int x, int y) { Console.WriteLine (x + "," + y); }
+
+void Test()
+{
+	Foo (x:1, y:2);     // 1, 2
+}
+
+
+
+// Named arguments can occur in any order. 
+
+Foo (x:1, y:2)
+Foo (y:2, x:1)
