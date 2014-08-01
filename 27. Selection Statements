@@ -61,3 +61,16 @@ if (true)
 	else 
 		Console.WriteLine ("executes");
 }
+
+
+
+// You can move around the curly braces to make it easier to read.
+
+if (true)
+{
+	if (false)
+		Console.WriteLine ();
+}
+
+else
+	Console.WriteLine ("does not execute");
