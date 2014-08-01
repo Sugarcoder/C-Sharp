@@ -38,5 +38,26 @@ else
 if (2 + 2 == 5)
 	Console.WriteLine ("Does not compute."); 
 else
-	if (2 + 2 == 5)
+	if (2 + 2 == 4)
 		Console.WriteLine ("Computes");   // Computes
+
+
+
+// These two ways of writing is identical:
+
+if (true)
+	if (false)
+		Console.WriteLine ();
+	else
+		Console.WriteLine ("executes");
+
+
+/*********/
+
+if (true)
+{
+	if (false)
+		Console.WriteLine();
+	else 
+		Console.WriteLine ("executes");
+}
