@@ -1,0 +1,42 @@
+/* SELECTION STATEMENTS
+
+Selection Statements (if, switch)
+
+Conditional operator (?:)
+
+Loop statements (while, do...while, for, foreach) */
+
+
+
+// If...
+
+if (5 < 2 * 3)
+	Console.WriteLine ("True");     // true
+
+// OR
+
+
+if (5 < 2 * 3)
+{
+	Console.WriteLine ("True");
+	Console.WriteLine ("Let's move on!");
+}
+
+
+// If...Else
+
+if (2 + 2 == 5)
+	Console.WriteLine ("Does not compute.");
+else
+	Console.WriteLine ("False");   // False
+
+
+
+// You can have nested if statements, too.
+
+
+if (2 + 2 == 5)
+	Console.WriteLine ("Does not compute."); 
+else
+	if (2 + 2 == 5)
+		Console.WriteLine ("Computes");   // Computes
