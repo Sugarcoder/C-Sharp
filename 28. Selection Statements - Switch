@@ -1,0 +1,55 @@
+/* Switch statements let you branch program execution based on a 
+selection of possible values that a variable may have. 
+
+Switch statements may result in cleaner codes than multiple 'if' statements. */
+
+
+// Example:
+
+static void ShowCard(int cardNumber)
+{
+	switch (cardNumber)
+	{
+		case 13: 
+			Console.WriteLine ("King");
+		case 12: 
+			Console.WriteLine ("Queen");
+		case 11: 
+			Console.WriteLine ("Jack");
+		case -1:                          // Joke is case -1
+			goto case 12;                 // In this game, Joke counts as queen
+		default:                          // Executes for any other cardNumber
+			Console.WriteLine (cardNumber);
+			break;
+	}
+}
+
+
+
+/* At the end of each 'case' clause, you must state where execution is to go next,
+with some kind of jump statement. 
+
+- break (jumps to the end of the switch statement)
+
+- goto case x (jumps to another case clause)
+
+- goto default (jumps to the default clause)
+
+- Any other jump statement (ex. return, throw, continue, goto ______)  */
+
+
+
+
+/* When more than one value should execute the same code,
+you can list the common cases sequentially:  */
+
+switch (cardNumber)
+{
+	case 13: 
+	case 12: 
+	case 11: 
+		Console.WriteLine ("Face card");
+	default:
+		Console.WriteLine ("Plain card");
+		break;
+}
