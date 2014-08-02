@@ -1,0 +1,65 @@
+/* NAME SCOPING 
+
+Names declared in outer namespaces can be used unqualified within inner namespaces. */
+
+// Example: 
+
+namespace Outer
+{
+	namespace Middle
+	{
+		class Class1 {}
+		
+		namespace Inner
+		{
+			class Class2 : Class1 {}
+		}
+	}
+}
+
+
+
+/* If you want to refer to a type in a different branch of your namespace hierarchy,
+you can use a partially qualified name. */
+
+
+// Example: 
+
+namespace MyTradingCompany
+{
+	namespace Common
+	{
+		class ReportBase {}
+	}
+	
+	namespace ManagementReporting
+	{
+		class SalesReport : Common.ReportBase {}
+	}
+}
+
+
+
+
+/* NAME HIDING 
+
+If the same type name appears in both an inner and outer namespace,
+the inner name wins. To refer to the type in the outer namespace, you must qualify its name. */
+
+// Example: 
+
+namespace Outer
+{
+	class Foo {}
+	
+	namespace Inner
+	{
+		class Foo {}
+		
+		class Test
+		{ 
+			Foo f1;           // = Outer.Inner.Foo
+			Outer.Foo f2;     // = Outer.Foo
+		}
+	}
+}
