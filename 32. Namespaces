@@ -44,3 +44,24 @@ namespace Other
 
 // Types not defined in any namespace may reside in the global namespace.
 
+
+
+
+
+// 'USING' Directive
+
+
+/* The 'Using' Directive imports a namespace, allowing you to refer to types
+without their fully qualified names. */
+
+// Example: 
+
+using Outer.Middle.Inner;
+
+class Test
+{
+	static void Main()
+	{
+		Class c;        // Don't need fully qualified name
+	}
+}
