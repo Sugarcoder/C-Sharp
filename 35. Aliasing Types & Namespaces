@@ -1,0 +1,15 @@
+/* Aliasing Types & Namespaces
+
+You can import just the specific types you need,
+giving each type an alias. */
+
+
+// Example: 
+
+
+using PropertyInfo2 = System.Reflection.PropertyInfo;
+
+class Program 
+{
+	ProgramInfo2 p;
+}
