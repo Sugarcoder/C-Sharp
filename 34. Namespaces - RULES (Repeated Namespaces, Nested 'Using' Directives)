@@ -1,0 +1,44 @@
+/* REPEATED NAMESPACES
+
+You can repeat a namespace declaration, 
+as long as the type names within the namespace don't conflict. */ 
+
+// Example: 
+
+namespace Outer.Middle.Inner
+{
+	class Class1 {}
+}
+
+namespace Outer.Middle.Inner
+{
+	class Class2 {}
+}
+
+
+
+
+/* NESTED 'USING' DIRECTIVES
+
+Nesting 'using' directives within a namespace allows you to scope
+the 'using' directive within a namespace declaration. */
+
+
+// Example (Class1 is visible in one scope, but not another): 
+
+namespace N1
+{
+	class Class1 {}
+}
+
+namespace N2
+{
+	using N1;
+	
+	class Class2 : Class1 {}
+}
+
+namespace N2
+{
+	class Class3 : Class1 {}     // Compile-time error
+}
