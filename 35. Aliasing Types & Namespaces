@@ -13,3 +13,14 @@ class Program
 {
 	ProgramInfo2 p;
 }
+
+
+
+// An entire namespace can be aliased:
+
+
+using R = System.Reflection;
+class Program
+{
+	R.PropertyINfo p;
+}
