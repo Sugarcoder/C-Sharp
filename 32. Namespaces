@@ -1,0 +1,46 @@
+/* Namespace - A domain for 'type' names. 
+
+
+Types are typically organized into hieracrhical namespaces, 
+making them easier to find and avoid conflicts. 
+
+For example, the RSA type that handles public key encryption 
+is defined within the following namespace:  */
+
+
+System.Security.Cryptography
+
+
+// The namespace keyword defines a namespace for types within that block.
+
+// Example: 
+
+
+namespace Outer.Middle.Inner           // Adding '.Class1' at the end is fine as well
+{
+	class Class1 {}
+	class Class2 {}
+}
+
+
+// The dots in the namespace indiecate a hierarchy of nested namespaces. 
+
+
+// Another example (similar to the above): 
+
+
+namespace Other
+{
+	namespace Middle
+	{
+		namespace Inner
+		{
+			class Class1 {}
+			class Class2 {}
+		}
+	}
+}
+
+
+// Types not defined in any namespace may reside in the global namespace.
+
