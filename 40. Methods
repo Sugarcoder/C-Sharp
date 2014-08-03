@@ -1,0 +1,23 @@
+/* METHODS
+
+A method performs an action in a series of statements.
+
+A method can receive input data from the caller by specifying parameters 
+and output data back to the caller by specifying a return type.
+
+A method can specify a 'void' return type (it doesn't return any value to its caller).
+
+A method's signature comprises its name and parameter types. */
+
+
+/* Methods allow the following modifiers:
+
+- Static modifier: static
+
+- Access modifier: public, internal, private, protected
+
+- Inheritance modifier: new, virtual, abstract, override, sealed
+
+- Partial method modifier: partial
+
+- Unmanaged code modifier: unsafe extern  */
