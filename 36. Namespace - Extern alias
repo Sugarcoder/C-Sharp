@@ -1,0 +1,54 @@
+/* EXTERN 
+
+Extern alias allow your program to reference two types with the same fully qualified name. */
+
+// Example: 
+
+Library 1: 
+	// csc target:library / out:Widgets1.dll widgetsv1.cs
+	
+	namespace Widgets 
+	{
+		public class Widget {}
+	}
+	
+Lirbary 2:
+	// csc target:library /out:Widgetsv2.cs
+	
+	namespace Widgets
+	{
+		public class Widget {}
+	}
+	
+Application:
+	// csc /r:Widgets1.dll /r:Widgets2.dll application.cs
+	
+	using Widgets;
+	
+	class Test
+	{
+		static void Main()
+		{
+			Widget w= new Widget();
+		}
+	}
+	
+/* The application above cannot compile, because Widget is ambiguous.
+
+Extern aliases can resolve that by doing this:  */
+
+
+// csc /r:W1=Widgets1.dll /r:W2=Widgets2.dll application.cs
+
+
+extern alias W1;
+extern alias W2;
+
+class Test
+	{
+	static void Main()
+		{
+		W1.Widgets.Widget w1 = new W1.Widgets.Widget();
+		W2.Widgets.Widget w2 = new W2.Widgets.Widget();
+		}
+	}
