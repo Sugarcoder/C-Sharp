@@ -1,0 +1,18 @@
+// 'Class' is the most common kind of reference type.
+
+
+class YourClassName
+{
+}
+
+
+/* A more complex 'class' has:
+
+- Preceding the 'class' keyword: Attributes and class modifiers
+  	Non-nested modifiers are public, internal, abstract, sealed, static, unsafe and partial.
+  
+- Followering YourClassName: Generic type parameters, a base class, and interfaces
+
+- Within the braces: Class members 
+	(methods, properties, indexes, events, fields, constructors, 
+	 overloaded operators, nested types, and a finalizer).
