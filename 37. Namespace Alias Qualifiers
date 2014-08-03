@@ -1,0 +1,58 @@
+/* NAMESPACE Alias Qualifiers
+
+Names in inner namespaces hide names in outer namespaces.
+Sometimes, the use of a fully qualified type name does not resolve the conflict. */
+
+// Example: 
+
+namespace N
+{
+	class A
+	{
+		public class B {}       // Nested type
+		static void Main()      // Instantiate class B
+		{
+			new A.B();
+		}
+	}
+}
+
+
+namespace A
+{
+	class B {}
+}
+
+
+
+/* The 'Main' method could be instantiated either in the nested class B
+or the class B within namespace A. 
+
+The compiler always gives higher precedence to identifiers in the current namespace. */
+
+
+
+
+// The :: token is used for namespace alias qualification. 
+
+// Example: 
+
+namespace N
+{
+	class A
+	{
+		static void Main()
+		{
+			System.Console.WriteLine (new A.B());
+			System.Console.WriteLine (new global::A.B());
+		}
+		
+		public class B {}
+	}
+}
+
+
+namespace A
+{
+	class B {}
+}
