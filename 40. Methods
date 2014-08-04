@@ -21,3 +21,45 @@ A method's signature comprises its name and parameter types. */
 - Partial method modifier: partial
 
 - Unmanaged code modifier: unsafe extern  */
+
+
+
+
+/*** OVERLOADING METHODS ***/
+
+/* A type may overload methods (have multiple methods with the same name),
+   as long as the signatures are different. */
+   
+// Example: 
+
+void Foo (int x) {...}
+void Foo (double x) {...}
+void Foo (int x, float y) {...}
+void Foo (float x, int y) {...}
+
+
+/* The example below would cause a 'compile-time error', because
+the return type and params modifier are not part of a method's signature:  */
+
+
+void Foo (int x) {...}
+float Foo (int x) {...}             // Compile-time error
+
+void Goo (int[]x) {...}
+void Goo (params int[] x) {...}     // Compile-time error
+
+
+
+
+/*** Pass-by-value vs. Pass-by-reference 
+     (Both are a part of the signature) ***/
+
+
+/* Foo(int) can coexist with Foo(ref int) or Foo(out int).
+	But Foo(ref int) cannot coexist with Foo(out int).  */
+	
+// Example: 
+
+void Foo (int x) {...}
+void Foo (ref int x) {...}     // It works so far
+void Foo (out int x) {...}     // Compile-time error
