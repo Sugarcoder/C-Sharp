@@ -1,0 +1,20 @@
+/* INSTANCE CONSTRUCTORS
+
+Constructors run initialization code on a class or struct. 
+
+A constructor is like a method, except the method name and return type are
+reduced to the name of the enclosing type. */ 
+
+// Example:
+
+public class Panda
+{
+	string name;                  // Define field
+	public Panda (string n)       // Compile-time error
+	{
+		name = n;
+	}
+}
+...
+
+Panda p = new Panda ("Perry");    // Call constructor
