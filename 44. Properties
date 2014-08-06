@@ -44,3 +44,47 @@ they give the implementer complete control over getting and setting its values. 
 - Inheritance modifiers: new, virtual, abstract, override, sealed 
 
 - Unmanaged code modifiers: unsafe, extern
+
+
+
+
+
+/* AUTOMATIC PROPERTIES
+
+Automatic property declaration instructs the compiler to provide this implementation.  */
+
+// Example: 
+
+public class Stock
+{
+	...
+	public decimal CurrentPrice { get; set; }
+}
+
+
+
+
+// 'GET' & 'SET' Accessibility 
+
+/* 'get' and 'set' accessors can have different access levels. 
+The typical use case for this is to have a public property with an 
+internal or private access modifier on the setter. */
+
+// Example: 
+
+public class Foo
+{
+	private decimal x;
+	private decimal X
+	{
+		get
+		{
+			return x;
+		}
+		
+		private set 
+		{
+			x = Math.Round (value, 2);
+		}
+	}
+}
