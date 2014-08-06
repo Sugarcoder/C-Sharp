@@ -1,0 +1,55 @@
+/* STATIC CONSTRUCTORS
+
+Static constructor executes once per type, rather than once per instance.
+
+A type can define only one static constructor,
+must be parameterless, and have the same name as the type. */
+
+// Example: 
+
+class Test
+{
+	static Test() 
+	{
+		Console.WriteLine ("Type Initialized");
+	}
+}
+
+
+// The only modifiers allowed by static constructors are unsafe and extern. 
+
+
+
+// Static field initializers run in the order in which the fields are declared. 
+
+// Example: 
+
+class Foo
+{
+	public static int X = Y;    // 0
+	public static int Y = 3;    // 3
+}
+
+
+/* The example below prints 0 followed by 3, because the field initializer 
+that instantiates a Foo...executes before X is initialized to 3.  */
+
+
+class Program
+{
+	static void Main()
+	{
+		Console.WriteLine (Foo.X);     // 3
+	}   
+}
+
+class Foo
+{
+	public static Foo Instance = new Foo();
+	public static int X = 3;
+	
+	Foo()
+	{
+		Console.WriteLine (X);      // 0
+	} 
+}
