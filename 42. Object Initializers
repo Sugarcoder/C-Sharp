@@ -1,0 +1,47 @@
+/* OBJECT INITIALIZERS
+
+Any accessible fields or properties of an object can be set 
+via an object initializer directly after construction. */
+
+// Example: 
+
+public class Bunny
+{
+	public string Name;
+	public bool LiveCarrots;
+	public bool LikeHumans;
+	
+	public Bunny () {}
+	public Bunny (string n) 
+	{
+		Name = n;
+	}
+}
+
+
+// Using object initializers, you can instantiate Bunny objects like this: 
+// (Parameterless constructors can omit empty parantheses)
+	
+	
+Bunny b1 = new Bunny 
+{ Name = "Bo", LikesCarrots = true, LikesHumans = false };
+
+
+Bunny b2 = new Bunny ("Bo") 
+{ LikesCarrots = true, LikesHumans = false };
+
+
+
+
+// The codes in b1 and b2 is equivalent to: 
+
+Bunny temp1 = new Bunny();      // temp1 is a compiler-generated name
+temp1.Name = "Bo";
+temp1.LikesCarrots = true;
+temp1.LikesHumans = false;
+Bunny b1 = temp1;
+
+Bunny temp2 = new Bunny ("Bo");
+temp2.LikesCarrots = true;
+temp2.LikesHumans = false;
+Bunny b2 = temp2;
