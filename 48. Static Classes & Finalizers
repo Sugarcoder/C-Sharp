@@ -1,0 +1,27 @@
+/* STATIC CLASSES 
+
+A class can be marked "static", indiecating that it must be composed
+solely of static members and cannot be subclassed.
+
+Examples: System.Console & System.Math are static classes.
+
+
+
+FINALIZERS 
+
+Finalizers are class-only methods that execute before the garbage collector reclaims the memory for an unreferenced object.  */
+
+// Example:
+
+class Class1
+{
+	~Class1()
+	{
+		...
+	}
+}
+
+
+/* Finalizers allow this modifier: 
+
+- Unmanaged code modifier: unsafe  */
