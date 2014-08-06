@@ -18,3 +18,69 @@ public class Panda
 ...
 
 Panda p = new Panda ("Perry");    // Call constructor
+
+
+
+/* Instance constructors allow the following modifiers:
+
+- Access modifier: public, internal, private, protected 
+
+- Unmanaged code modifiers: unsafe extern  */
+
+
+
+
+
+/* OVERLOADING CONSTRUCTORS
+
+A Class or struct may overload constructors. 
+
+To avoid code duplication, one constructor may call another using:  */
+
+usiner System;
+
+public class Wine
+{
+	public decimal Price;
+	public int Year;
+	public Wine (decimal price) 
+	{ 
+		Price = price;
+	}
+	public Wine (decimal price, int year) : this (price)
+	{
+		 Year = year;
+	}
+}
+
+
+
+
+
+/* IMPLICIT PARAMETERLESS CONSTRUCTORS 
+
+If you do not define any constructors, 
+the C# compiler automatically gnerates a parameterless public constructor. */
+
+
+
+
+
+/* NON-PUBLIC CONSTRUCTORS
+
+Constructors do not need to be public. 
+Reason: to be able to control instance creation via a static method call. 
+The static method could be used to return an object from a pool,
+rather than necessarily creating a new object or return various subclasses. */
+
+// Example: 
+
+public class Class1
+{
+	Class1() {}                 // Private constructor
+	public static Class1 Create (...) 
+	{
+		// Perform custom logic here to return an instance of Class1
+		...
+	}
+}
