@@ -1,0 +1,37 @@
+/* 'THIS' REFERENCE
+
+'This' reference = refers to the instance itself. 
+
+'This' reference is valid only within non-static members of a class or struct.  */
+
+
+// Example 
+// (The Marry method uses 'this' to set the partner's mate field):
+
+
+public class Panda
+{
+	public Panda Mate;
+	
+	public void Marry (Panda partner)
+	{
+		Mate = partner;
+		partner.Mate = this;
+	}
+}
+
+
+
+// 'This' reference also disambiguates a local variable or parameter from a field.
+
+// Example: 
+
+
+public class Test
+{
+	string name;
+	public test (string name) 
+	{
+		this.name = name;
+	}
+}
