@@ -1,0 +1,35 @@
+/* CONSTANTS (const)
+
+A constant is a static field whos value can never change. 
+
+A constant can be any of the built-in numeric types, bool, char, string, or an enum type. */
+
+// Example 
+// (declared with 'const', must be initialized with a value): 
+
+public class Test
+{
+	public const string Message = "Hello World";
+}
+
+
+
+/* The evaluation of a constant occurs at compile time. 
+
+Constants can be declared local to a method.  */
+
+// Example: 
+
+static void Main()
+{
+	const double twoPI = 2 * System.Math.PI;
+	...
+}
+
+
+
+/* Non-local constants allow the following modifiers: 
+
+- Access modifiers: public, internal, private, protected
+
+- Inheritance modifer: new   */
