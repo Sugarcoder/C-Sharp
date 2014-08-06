@@ -24,9 +24,9 @@ public class Stock
 }
 
 
-// 'get' accessor runs when the property is read. It must return the property's type.
+// 'get' accessor runs when the property is read. It must return the property's type.   (If only have 'get', property is read-only)
 
-// 'set' accessor runs when the property is assigned. 
+// 'set' accessor runs when the property is assigned.           (If only have 'set', property is write-only - rarely used)
 
 
 
