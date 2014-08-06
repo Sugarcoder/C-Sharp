@@ -25,7 +25,7 @@ Panda p = new Panda ("Perry");    // Call constructor
 
 - Access modifier: public, internal, private, protected 
 
-- Unmanaged code modifiers: unsafe extern  */
+- Unmanaged code modifiers: unsafe, extern  */
 
 
 
