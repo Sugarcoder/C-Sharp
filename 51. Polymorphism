@@ -1,0 +1,26 @@
+/* POLYMORPHISM
+
+References are polymorphic. 
+A variable of type x can refer to an object that subclasses x. */ 
+
+// Example: 
+
+public static void Display (Asset asset) 
+{
+	System.Console.WriteLine (asset.Name);
+}
+
+
+
+// This method can display both a Stock and a House, since they are both Assets: 
+
+
+Stock msft = new Stock ... ;
+House mansion = new House ... ;
+
+Display (msft);
+Display (mansion); 
+
+
+/* Polymorphism works on the basis that subclasses (Stock and House) have all the
+features of their base class (Asset). It does not work in reverse. */
