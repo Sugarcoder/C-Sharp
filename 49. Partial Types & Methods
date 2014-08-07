@@ -1,0 +1,57 @@
+/* PARTIAL TYPES & METHODS
+
+Partial types allow a type definition to be split (across multiple files usually). */
+
+// Example: 
+
+// PaymentFormGen.cs - auto-generated
+
+partial class PaymentForm {...}
+
+// PaymentForm.cs - hand-authored
+
+partial class PaymentForm {...}
+
+
+// Each participant must have the 'partial' declaration, and be available at compile time. 
+
+
+// There are 2 ways to specify a base class with partial classes.
+
+// This specifies the same base class on each participant:
+
+partial class PaymentForm : ModalForm {}
+partial class PaymentForm : ModalForm {}
+
+
+// This specifies the base class on just one participant: 
+
+partial class PaymentForm: ModalForm {}
+partial class PaymentForm {}
+
+
+
+/* A partial type may contain partial methods, 
+and contain 2 parts: a definition and an implementation. 
+
+Partial methods must be 'void' and implicitly 'private'.  */
+
+
+// Example: 
+
+partial class PaymentForm   // In auto-generated file
+{
+	...
+	partial void ValidatePayment (decimal amount);
+}
+
+
+partial class PaymentForm  // In hand-authored file
+{
+	...
+	partial void ValidatePayment (decimal amount);
+	{
+		if (amount < 100)
+		...
+	}
+}
