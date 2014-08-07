@@ -1,0 +1,59 @@
+/* CASTING & REFERENCE CONVERSIONS
+
+An object reference can be:
+
+- Implicitly upcast to a base class reference
+- Explicitly downcast to a subclass reference
+
+An upcast always succeeds, and a downcast succeeds only if the object is suitably typed. */
+
+
+
+/* UPCASTING
+
+Upcast creates a base class reference from a subclass reference. */
+
+// Example: 
+
+Stock msft = new Stock();
+Asset a  = msft;            // Upcast
+
+/* After the upcast, variable 'a' still references 
+the same Stock object as variable 'msft'. Only references are affected. */
+
+
+
+// Although 'a' and 'msft' refers to the same object, 'a' has more restrictive view on that object: 
+
+Console.WriteLine (a.Name);           // Okay
+Console.WriteLine (a.SharesOwned);    // Error: SharesOwned undefined
+
+
+/* The last line generates a compile-time error because variable 'a' is of type 'Asset', 
+even though it refers to the object of type 'Stock'.  */
+
+
+
+
+/* DOWNCASTING
+
+Downcast creates a subclass reference from a base class reference. */
+
+// Example: 
+
+
+Stock msft = new Stock();
+Asset a = msft;                         // Upcast
+Stock s = (Stock)a;                     // Downcast
+Console.WriteLine (s.SharesOwned);      // <No error>
+Console.WriteLine (s == a);             // True
+Console.WriteLine (s == msft);          // True
+
+
+// Downcast requires an explicit cast because it can potentially fail at runtime. 
+
+// Example: 
+
+House h = new House();
+Asset a = h;               // Upcast always succeeds
+Stock s = (Stock)a;        // Downcast fails: a is not a 'Stock'
