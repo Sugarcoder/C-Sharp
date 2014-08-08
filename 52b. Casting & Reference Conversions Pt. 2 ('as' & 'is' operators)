@@ -1,0 +1,33 @@
+// CASTING & REFERENCE CONVERSIONS PT. 2
+
+
+/* The 'as' Operator 
+
+The 'as' operator performs a downcast that eveluates to 'null', if the downcast fails. */
+
+// Example: 
+
+Asset a = new Asset();
+Stock s = a as Stock;     // s is null, no exception thrown
+
+
+// This is to test whether the result is null or not: 
+
+if (s != null) Console.WriteLine (s.SharesOwned);
+
+
+
+
+/* The 'is' Operator
+
+The 'is' operator tests whether a reference conversion 
+would succeed or not (whether an object derives from a specified class).  */
+
+// Example: 
+
+if (a is Stock)
+	Console.WriteLine (((Stock)a).SharesOwned);
+
+
+/* The 'is' operator does not consider custom or numeric conversions, 
+but it does consider unboxing conversions. */
