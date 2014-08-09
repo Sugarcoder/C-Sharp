@@ -1,0 +1,22 @@
+/* An Overriden function member may 'seal' its implementation with
+the "sealed" keyword to prevent it from being overriden by further subclasses. */
+
+/* EXAMPLE:
+(sealing Houses' implementationof Liability, preventing a class [from House] overriding Liability: */
+
+
+public sealed override decimal Liability 
+{
+	get
+	{
+		return Mortgage;
+	}
+}
+
+
+/* You can also seal the class itself, implicitly sealing all the virtual functions,
+by applying the 'sealed' modifier to the class itself. */
+
+
+// Sealing a class is more common than sealing a function.
+
