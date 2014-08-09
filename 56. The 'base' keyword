@@ -1,0 +1,22 @@
+/* The 'base' keyword is similar to the 'this' keyword. 
+
+It is used for: 
+
+- Accessing an overriden function member from the subclass
+
+- Calling a base-class constructor  */
+
+
+// Example: 
+
+public class House : Asset 
+{
+	...
+	public override decimal Liability
+	{
+		get
+		{
+			return base.Liability + Mortgage;
+		}
+	}
+}
