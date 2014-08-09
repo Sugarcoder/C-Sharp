@@ -1,0 +1,45 @@
+/* ABSTRACT CLASSES
+
+A class declared as abstract can never be instantiated. 
+Only its concrete subclasses can be instantiated. 
+
+Abstract classes are able to define abstract members. */
+
+
+
+/* 
+
+ABSTRACT MEMBERS 
+
+Abstract members are like virtual members, 
+except they don't provide a default implementation. 
+
+That implementation must be provided by the subclass, 
+unless the subclass is declared as 'abstract' as well. */
+
+// Example: 
+
+public abstract class Asset
+{
+	// Note the empty implementation
+	public abstract decimal NetValue 
+	{
+		get;
+	}
+}
+
+
+public class Stock : Asset
+{
+	public long SharesOwned;
+	public decimal CurrentPrice;
+	
+	// Override like a virtual method.
+	public override decimal NetValue
+	{
+		get
+		{	
+			return CurrentPrice * SharesOwned;
+		}
+	}
+}
