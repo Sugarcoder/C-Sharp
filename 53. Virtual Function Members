@@ -1,0 +1,47 @@
+/* VIRTUAL FUNCTION MEMBERS
+
+A function marked 'virtual' can be overriden by subclasses wanting to provide a specialized implementation. 
+
+Methods, properties, indexers and events can all be declared 'virtual'. */
+
+// Example: 
+
+public class Asset
+{
+	public string Name;
+	public virtual decimal Liability 
+	{ 
+		get 
+		{
+			return 0;
+		} 
+	}
+}
+
+
+// A subclass overrides a virtual method by applying the override modifier: 
+
+
+public class Stock : Asset
+{
+	public long SharesOwned;
+}
+
+
+public class House : Asset
+{
+	public decimal Mortgage;
+	public override decimal Liability 
+	{
+		get
+		{
+			return Mortgage;
+		}
+	}
+}
+
+
+/* Calling virtual methods from a constructor is potentially dangerous, 
+because authors of subclasses are unlikely to know, 
+especially when they are overriding the method that they are working with
+a partially initialized object. */
