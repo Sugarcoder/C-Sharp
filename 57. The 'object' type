@@ -1,0 +1,35 @@
+/* object (System.Object) is the ultimate base class for all types/
+'object' is a reference type.  */
+
+
+
+/* (Stack has two operations: push an object on the stack, 
+pop an object off the stack.)
+
+Here's a simple implementation that can hold up to 10 objects:  */
+
+public class Stack
+{
+	int position; 
+	object[] data = new object[10]; 
+	public void Push (object obj)
+	{
+		data[position++] = obj;
+	}
+	
+	public object Pop() 
+	{
+		return data[--position];
+	}
+}
+
+
+
+// We can 'push' and 'pop' instances of any type to and from the Stack: 
+
+
+Stack stack = new Stack();
+stack.Push ("sausage");
+string s = (string) stack.Pop();     // Downcast, so explicit cast is needed
+
+Console.WriteLine (s);       // sausage
