@@ -1,0 +1,77 @@
+/* An INTERFACE is similar to a class, 
+except it provides a specification rather than an implementation for its members. 
+
+- Interface members are all implicitly 'abstract'. 
+
+- A class (or struct) can implement multiple interfaces. */ 
+
+
+
+/* An interface declaration is like a class declaration,
+except it provides no implementation for its members, 
+since all of its members are implicitly 'abstract'.  */
+
+
+
+// An interface can contain only methods, properties, events, and indexers.
+
+
+
+/* Interface members are always implicitly 'public', 
+and cannot declare an access modifier. 
+
+
+Implementing an interface means providing a 'public' implementation for all of its members. */
+
+// Example: 
+
+
+internal class Countdown : IEnumerator
+{
+	int count = 11; 
+	
+	public bool MoveNext() 
+	{
+		return count-- > 0;
+	}
+	
+	public object Current 
+	{
+		get
+		{
+			return count;
+		}
+	}
+	
+	public void Reset() 
+	{
+		throw new NotSupportException();
+	}
+}
+
+
+
+
+// Converting a 'struct' to an interface causes boxing. 
+
+// Calling an implicitly implemented member on a 'struct' does not cause boxing. 
+
+// Example: 
+
+interface I 
+{
+	void Foo(); 
+}
+
+struct S : I 
+{
+	public void Foo() {} 
+}
+
+...
+
+S s = new S();    
+s.Foo();           // No boxing
+
+I i = s;           // Box occurs when casting to interface.
+i.Foo(); 
