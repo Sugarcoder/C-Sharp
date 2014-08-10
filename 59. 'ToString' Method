@@ -1,0 +1,33 @@
+/* The 'ToString' method returns the default textual representation of a type instance. 
+This method is overridden by all built-in types. */ 
+
+// Example: 
+
+int x = 1;
+string s = x.ToString();       // s is 1.
+
+
+
+
+// This is how to override the "ToString" method on custom types: 
+
+public class Panda
+{
+	public string Name; 
+	public override string ToString() 
+	{
+		return Name;
+	}
+}
+...
+
+Panda p = new Panda 
+{
+	Name = "Perry";
+}
+
+Console.WriteLine (p);     // Perry 
+
+
+// If you don't override the 'ToString', the method returns the type name.
+
