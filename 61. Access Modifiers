@@ -1,0 +1,81 @@
+/* To promote encapsulation, a type or type member may limite its accessibility
+to other types and other assemblies by adding one of five access modifiers to the declaration: 
+
+- public: Fully accessible. Implicitly accessible for members of an enum or interface.
+
+- internal: Accessible only within containing assembly or field assemblies. 
+			Default accessibility for non-nested types.
+			
+- private: Accessible only wtihin containint type. 
+			Default accessibility for members of a class or struct.
+			
+- protected: Accessible only within containing type or subclasses. 
+
+- protected internal: The union of protected and internal accessibility.  */
+
+
+
+
+// EXAMPLES
+
+// 'Class2' is accessible from outside its assembly, 'Class1' is not:
+
+class Class1{}              // Class1 is internal (default)
+public class Class2 {}    
+
+
+// 'ClassB' exposes field x to other types in the same assembly, 'ClassA' does not:
+
+class ClassA 
+{
+	int x;         // x is private (default)
+}
+
+class ClassB
+{
+	internal int x; 
+}
+
+
+
+
+// Functions within 'subclass' can call 'bar', but not 'foo': 
+
+class BaseClass
+{
+	void Foo() {}                // 'Foo' is private (default)
+	protected void Bar() {}
+}
+
+class Subclass : BaseClass
+{
+	void Test1() { Foo(); }       // Error - cannot access 'Foo'
+	void Test2() { Bar(); }       // OK
+}
+
+
+
+
+
+/* When overriding a base class function, 
+accessibility must be identical on the overridden function. */
+
+// Example: 
+
+
+class BaseClass 
+{
+	protected virtual void Foo() {} 
+}
+
+class SubClass1 : BaseClass
+{
+	protected override void Foo() {}          // OK
+}
+
+class SubClass2 : BaseClass
+{
+	protected override void Foo() {}          // Error
+}       
+	
+
