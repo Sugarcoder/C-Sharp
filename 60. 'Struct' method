@@ -1,0 +1,60 @@
+/* STRUCT = similar to a class, except: 
+
+- A 'struct' is a value type, whereas a class is a reference type.
+
+- A 'struct' does not support inheritance  */
+
+
+
+
+/* A 'struct' can have all the members a 'class' can, except: 
+
+- A parameter constructor
+
+- A finalizer
+
+- Virtual members  */
+
+
+
+
+/* A 'struct' is used instead of a class when value-type semantics are desirable. 
+Because a 'struct' is a value type, each instance does not require instantiation 
+of an object on the heap. */
+
+
+
+// Example (declaring and calling 'struct' constructors:
+
+
+public struct Point
+{
+	int x, y;
+	public Point (int x, int y) 
+	{
+		this.x = x; this.y = y; 
+	}
+}
+...
+
+Point p1 = new Point();            // p1.x and p1.y will be 0
+Point p2 = new Point (1, 1);       // p1.x and p1.y will be 1
+
+
+
+
+// Unfortunately, this will generate compile-time error:
+
+public struct Point
+{
+	int x = 1;                 // Illegal, cannot initialize field
+	int y;
+	public Point()   {}        // This is illegal
+
+	public Point (int x) 
+	{
+		this.x = x;            // Illegal: must assign field y
+	}
+
+
+// Changing 'struct; to class will make this example legal. 
