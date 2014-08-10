@@ -1,0 +1,48 @@
+/* BOXING = The act of converting a value-type instance to a reference-type instance. 
+
+Reference type can be an 'object' class or an interface. */
+
+// Example: 
+
+int x = 9;
+object obj = x;        // Box the int
+
+
+
+
+// UNBOXING = Reverses the operation, by casting the object back to the original value type. 
+
+// Example: 
+
+int y = (int)obj;    // Unbox the int 
+
+
+/* Unboxing requires an explicit cast. 
+The runtime checks that the stated value type matches the actual object type,
+and throws an InvalidCastException if the check fails. */ 
+
+// Example ('long' does not match int, so it throws an exception):
+
+
+object obj = 9;           // 9 is inferred to be of type int
+long x = (long) obj;       // InvalidCastException 
+
+
+// This succeeds though: 
+
+object obj = 9;
+long x = (int) obj;  
+
+
+
+
+
+/* Boxing copies the value-type instance into the new object,
+and unboxing copies the contents of the object back into a value-type instance.  */
+
+// Example (changing i does not change the boxed copy): 
+
+int i = 3; 
+object boxed = i; 
+i = 5; 
+Console.WriteLine (boxed);   // 3
