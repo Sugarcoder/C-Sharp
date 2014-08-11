@@ -1,0 +1,46 @@
+/* Enum = A special value type that lets you specify 
+a group of named numeric constants. */
+
+
+// Example: 
+
+public enum BorderSide 
+{
+	Left, Right, Top, Bottom
+}
+
+
+// This is how you use it:
+
+BorderSide topSide = BorderSide.Top;
+bool isTop = (topSide == BorderSide.Top);    // True
+
+
+
+
+/* Each enum has an underlying integral value. This is by default: 
+
+- Underlying values are type 'int'.
+
+- The constants 0, 1, 2...are automatically assigned in the declaration order of the enum members. */
+
+
+
+
+
+// You can convert an enum instance to and from its underlying integral value with a explicit cast:
+
+int i = (int) BorderSide.Left;
+BorderSide side = (BorderSide) i;
+bool leftOrRight = (int) side <= 2;
+
+
+
+// You can explicitly cast one enum type to another:
+
+public enum HorizonAlignment
+{
+	Left = BorderSide.Left,
+	Right = BorderSide.Right, 
+	Center
+}
