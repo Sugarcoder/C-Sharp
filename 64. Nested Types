@@ -1,0 +1,41 @@
+/* Nested Type = declared within the scope of another type. 
+
+To access 'Color.Red' from the 'TopLevel' class, code like this:  */
+
+TopLevel.Color color = TopLevel.Color.Red;
+
+
+/* All types (classes, structs, interfaces, delegates a& enums) 
+can be nested inside either a class or struct. 
+
+Example:  */
+
+
+public class TopLevel
+{
+	static int x; 
+	
+	class Nested
+	{
+		static void Foo() 
+		{
+			Console.WriteLine (TopLevel.x);
+		}
+	}
+	
+
+
+// Example of applying the 'protected' access modifier to a nested type:
+
+
+public class TopLevel
+	{
+		protected class Nested {}
+	}
+	
+	
+class Test
+	{
+		TopLevel.Nested n;
+	}
+	
