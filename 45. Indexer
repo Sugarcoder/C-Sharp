@@ -1,6 +1,5 @@
-/* INDEXERS 
+/* Indexers are similar to properties, but are accessed via an index argument rather than a property name.
 
-Indexers are similar to properties, but are accessed via an index argument rather than a property name.
 
 For example, the 'string' class has an indexer that lets you 
 access each of its char values via an int index:  */
