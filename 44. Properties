@@ -1,6 +1,5 @@
-/* PROPERTIES 
+/* Properties is declared like a field, but with a 'get/set' block added. */
 
-Properties is declared like a field, but with a 'get/set' block added. */
 
 // Example (How to implement 'CurrentPrice' as a property):
 
