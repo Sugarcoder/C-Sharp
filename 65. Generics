@@ -1,0 +1,35 @@
+/* Generics express reusability with a template that contains placeholder types. 
+
+Generics can increase type safety, reduce casting and reduce boxing.
+
+Generic type = declares type parameters -placeholder types to be filled in by the consumer of the generic type. 
+
+EXAMPLE of a generic type Stack<T>, 
+		 designed to stack instances of type T.Stack<T>
+		 (declares a single type parameter T):   */
+		 
+public class Stack<T>
+{
+	int position;
+	T[] data = new T[100];               // 'T' is the integer
+	public void Push (T obj) 
+	{
+		data[position++] = obj;
+	}
+	
+	public T Pop ()
+	{
+		return data[--position];
+	}
+}
+	
+
+
+// How to use Stack<T>:
+
+
+stack<int> stack = new Stack<int>();
+stack.Push(5);
+stack.Push(10);
+int x = Stack.Pop();       // x is 10
+int y = Stack.Pop();       // y is 5 
