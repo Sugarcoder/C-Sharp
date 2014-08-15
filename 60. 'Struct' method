@@ -24,7 +24,7 @@ of an object on the heap. */
 
 
 
-// Example (declaring and calling 'struct' constructors:
+// Example (declaring and calling 'struct' constructors):
 
 
 public struct Point
