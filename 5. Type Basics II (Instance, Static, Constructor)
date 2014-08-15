@@ -41,7 +41,7 @@ public class Panda
   public string Name;     // Instance field
   public static int Population;   // Static field
   
-  public Panda (string n)      // Constructor
+  public Panda (string n)      // Constructor - what is in the parantheses
   {
     Name = n;    // Assign the Instance field
 	Population = Population + 1;   // Increment the static Population field
