@@ -32,9 +32,11 @@ partial class PaymentForm {}
 
 
 /* A partial type may contain partial methods, 
-and contain 2 parts: a definition and an implementation. 
+and contain 2 parts: a definition and an implementation.  */
 
-Partial methods must be 'void' and implicitly 'private'.  */
+
+
+// Partial methods must be 'void' and implicitly 'private'.
 
 
 // Example: 
